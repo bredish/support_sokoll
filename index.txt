@@ -27,7 +27,7 @@
       padding: 20px;
     }
     h1 {
-      font-size: 1.8em;
+      font-size: 2em;
       color: #5a2ea6;
       margin-top: 0;
     }
@@ -43,19 +43,18 @@
     }
     .calendar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px;
       margin: 20px auto;
-      max-width: 1000px;
+      max-width: 800px;
       padding: 0 10px;
     }
     .day {
-      padding: 15px;
+      padding: 20px;
       background-color: #fff;
       text-align: center;
       border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      font-size: 0.95em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     .day:hover {
       background-color: #f1f1f1;
@@ -66,7 +65,7 @@
       font-weight: bold;
     }
     .invite {
-      background-color: #4b0082;
+      background-color: #4b0082; /* Wildberries purple */
       color: white;
       padding: 20px;
       text-align: center;
@@ -77,7 +76,31 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2em;
+      font-size: 1.3em;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 5px;
+        padding: 0;
+      }
+      .day {
+        padding: 15px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 5px;
+      }
+      .day {
+        padding: 10px;
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -92,6 +115,7 @@
     <input type="text" id="searchInput" placeholder="Поиск по дате, названию или типу...">
   </header>
 
+  <!-- Календарь -->
   <div class="calendar">
     <div class="day"><strong>Пн</strong></div>
     <div class="day"><strong>Вт</strong></div>
@@ -101,39 +125,101 @@
     <div class="day"><strong>Сб</strong></div>
     <div class="day"><strong>Вс</strong></div>
 
+    <!-- 1 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/Праздник_Весны_и_Труда" target="_blank">1 мая<br>Праздник Весны и Труда</a></div>
+    
+    <!-- 2 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_Георгия_Победоносца" target="_blank">2 мая<br>День Георгия Победоносца</a></div>
-    <div class="day">3 мая<br>Завтрак на балконе — must have 🌤️</div>
-    <div class="day">4 мая<br>Самое время начать новую книгу 📖</div>
+    
+    <!-- 3 мая -->
+    <div class="day">3 мая<br>Идеальный день для пикника</div>
+    
+    <!-- 4 мая -->
+    <div class="day">4 мая<br>Время для прогулки на свежем воздухе</div>
+    
+    <!-- 5 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_водолаза" target="_blank">5 мая<br>День водолаза</a></div>
-    <div class="day">6 мая<br>Погуляй без телефона 🌿</div>
+    
+    <!-- 6 мая -->
+    <div class="day">6 мая<br>Время для отдыха и творчества</div>
+    
+    <!-- 7 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_радио" target="_blank">7 мая<br>День радио</a></div>
+    
+    <!-- 8 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_памяти_и_примирения" target="_blank">8 мая<br>День памяти и примирения</a></div>
+    
+    <!-- 9 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_Победы" target="_blank">9 мая<br>День Победы</a></div>
+    
+    <!-- 10 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_Героя_Советского_Союза" target="_blank">10 мая<br>День Героя Советского Союза</a></div>
-    <div class="day">11 мая<br>Устрой пикник в парке 🍓</div>
+    
+    <!-- 11 мая -->
+    <div class="day">11 мая<br>День для семейных встреч</div>
+    
+    <!-- 12 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/Перенос_выходного_за_9_мая" target="_blank">12 мая<br>Перенос выходного</a></div>
+    
+    <!-- 13 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_черноморского_флота" target="_blank">13 мая<br>День черноморского флота</a></div>
-    <div class="day">14 мая<br>Поставь себе цель на месяц 🎯</div>
+    
+    <!-- 14 мая -->
+    <div class="day">14 мая<br>Шопинг-среда!</div>
+    
+    <!-- 15 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/Международный_день_семьи" target="_blank">15 мая<br>Международный день семьи</a></div>
-    <div class="day">16 мая<br>Сделай день без соцсетей 🚫📱</div>
+    
+    <!-- 16 мая -->
+    <div class="day">16 мая<br>Время для отдыха в парке</div>
+    
+    <!-- 17 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_электросвязи" target="_blank">17 мая<br>День электросвязи</a></div>
+    
+    <!-- 18 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/Международный_день_музеев" target="_blank">18 мая<br>Международный день музеев</a></div>
-    <div class="day">19 мая<br>Позвони другу, которого давно не слышал 📞</div>
-    <div class="day">20 мая<br>День кофе на лавочке ☕️</div>
+    
+    <!-- 19 мая -->
+    <div class="day">19 мая<br>Прекрасный день для шопинга</div>
+    
+    <!-- 20 мая -->
+    <div class="day">20 мая<br>Лучший день для отдыха на природе</div>
+    
+    <!-- 21 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_полярника" target="_blank">21 мая<br>День полярника</a></div>
-    <div class="day">22 мая<br>Сделай доброе дело тайно 🤫</div>
-    <div class="day">23 мая<br>Пройди 10 000 шагов 🚶</div>
+    
+    <!-- 22 мая -->
+    <div class="day">22 мая<br>Идеальный день для расслабления</div>
+    
+    <!-- 23 мая -->
+    <div class="day">23 мая<br>Расслабьтесь с друзьями</div>
+    
+    <!-- 24 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_славянской_письменности_и_культуры" target="_blank">24 мая<br>День славянской письменности и культуры</a></div>
+    
+    <!-- 25 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_филолога" target="_blank">25 мая<br>День филолога</a></div>
-    <div class="day">26 мая<br>Вспомни любимый фильм и пересмотри 🎬</div>
+    
+    <!-- 26 мая -->
+    <div class="day">26 мая<br>Шопинг-понедельник!</div>
+    
+    <!-- 27 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_библиотек" target="_blank">27 мая<br>День библиотек</a></div>
+    
+    <!-- 28 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_пограничника" target="_blank">28 мая<br>День пограничника</a></div>
+    
+    <!-- 29 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_ветеранов_таможенной_службы" target="_blank">29 мая<br>День ветеранов таможенной службы</a></div>
-    <div class="day">30 мая<br>Почти лето — сделай план на отпуск ✈️</div>
+    
+    <!-- 30 мая -->
+    <div class="day">30 мая<br>Идеальный день для шопинга</div>
+    
+    <!-- 31 мая -->
     <div class="day"><a href="https://ru.wikipedia.org/wiki/День_без_табака" target="_blank">31 мая<br>День без табака</a></div>
   </div>
 
+  <!-- Приглашение в Telegram -->
   <div class="invite">
     <p><strong>Присоединяйтесь к нашему Telegram-каналу!</strong></p>
     <p>Не пропустите уникальные розыгрыши, акции и специальные предложения! Будьте в курсе всех новинок и выгодных предложений — подпишитесь прямо сейчас и участвуйте!</p>
@@ -143,9 +229,10 @@
   <script>
     const searchInput = document.getElementById('searchInput');
     const days = document.querySelectorAll('.day');
+    
     searchInput.addEventListener('keyup', function () {
       const filter = this.value.toLowerCase();
-      days.forEach(day => {
+      days.forEach(function(day) {
         const text = day.textContent.toLowerCase();
         day.style.display = text.includes(filter) ? '' : 'none';
       });
